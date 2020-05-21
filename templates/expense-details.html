@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+       <!-- Required meta tags -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+​
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+​    
+    <!-- CSS File -->
+    <link rel="stylesheet" href="../static/css/style.css">
+    <!-- <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script> -->
+    <script src="https://d3js.org/d3.v4.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" type="text/javascript"></script>
+    <!-- Load color scale -->
+    <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+
+    <title>Charity Project</title>
+        <meta charset="utf-8">
+        <title>d3 Updating Bar Chart With Dropdown</title>
+        <!-- <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script> -->
+        <style>
+        body {
+            font: 10px sans-serif;
+        }
+        select {
+            display: block;
+        }
+        .bar {
+            fill: steelblue;
+            opacity: 0.8;
+        }
+
+        .axis path,
+        .axis line {
+            fill: none;
+            stroke: #000;
+            shape-rendering: crispEdges;
+        }
+        .bubbles {
+          stroke-width: 1px;
+          stroke: black;
+          opacity: .8
+        }
+        .bubbles:hover {
+          stroke: black;
+        }
+        </style>
+    </head>
+    
+      <body style="background-color:rgb(223, 222, 222);">
+
+        <!-- Navigation Bar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-fixed-top">
+            <a class="navbar-brand" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-weight: bold;" href="/">Charity Project</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="charity-details.html">Charity Details<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="expense-details.html">Financial Dashboard</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="us-charity-info.html">US Charity Info</a>
+                </li>
+               
+            </div>
+          </nav>
+    ​
+        <!-- Put extra space between navbar and containers below -->  
+        <br>
+    ​
+        <!-- EXPENSE DETAILS PAGE -->
+        
+        
+        <div id="my_dataviz">
+          
+          <div class="jumbotron">
+          <div class="row">
+          <div class="col-lg-12 col-md-12 col-sm-12">
+          <h1 class="display-4">CHARITY CATEGORIES: WHERE ARE DONORS SENDING THEIR MONEY?</h1>
+          <hr class="my-4">
+          <!-- <p class="description"><h3>Fundraising Efficiency:</h3> 
+
+            <h5> Average Fundraising Expenses/Average Total Contribution = Fundraising Efficiency<br><br></h5></p> -->
+              
+          </div>
+          </div>
+        </div>
+      </div>
+      <div class="tooltip" style="opacity: 0; background-color: black; border-radius: 5px; padding: 10px; color: white;"></div>
+        <!-- MAIN JUMBOTRON -->
+        <div class="jumbotron">
+          <div class="row">
+          <div class="col-lg-12 col-md-12 col-sm-12">
+          <h1 class="display-4">CHARITY FINANCIAL TOOL</h1>
+          <hr class="my-4">
+          <p class="description"><h5>Select a Charity from the dropdown below to get more details on revenue and expenses.</h5>
+          </div>
+          </div>
+        </div>
+    
+        <!-- FILTER JUMBOTRON -->
+        <!-- <div class="jumbotron" id="page-body">
+          <div class="row">
+          <div class="col-lg-2 col-md-2 col-sm-2">
+            <h1 class="filter-header">FILTERS</h1>
+          </div> -->
+    
+     
+          <div class="col-lg-10 col-md-10 col-sm-10">
+            <div class = "filter-lists">
+              <!-- ************************ -->
+              <!-- ADD FILTER LISTS -->
+              <!-- ************************ -->
+             
+            </div>
+          </div>
+    
+          <div class="col-lg-12 col-md-12 col-sm-12">
+            <hr class="my-4" id="filter-line">
+          </div>
+          
+          
+        </div> 
+        
+        </div>
+        <!-- <div id = "bar-chart">
+        </div> -->
+        <div id='vis-container'></div>
+
+        
+        
+        
+        <script type="text/javascript">
+          var data = {{total_expenses|tojson}}
+          
+        </script>
+         
+            <script type="text/javascript" src="{{url_for('static', filename='js/app2.js')}}"></script>
+           <!-- Call in data from app.py file using MongoDB --> 
+    </body>
+
+</html>

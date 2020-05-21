@@ -1,0 +1,230 @@
+/* WEBSITE CSS */
+
+.logo {
+    font-weight: bold;
+    color:white;
+    font-size: 40px;
+    font-style:bold;
+}
+.first image {
+    width: 20%; 
+    float: left; 
+    margin : 5px;
+}
+
+#filter-btn {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgb(191, 223, 191);
+    font-weight: bold;
+}
+
+.form-control {
+    font-size: 12px;
+}
+
+/* NAVIGATION BAR FORMATTING */
+/* Formatting Homepage button on nav bar */
+.navbar-brand {
+    list-style-type: none;
+    margin: 10px;
+    padding: 10px;
+    overflow: hidden;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+/* Formatting buttons on nav bar */
+.navbar-nav a{
+display: block;
+color: black;
+padding: 10px 10px;
+text-decoration: none;
+}
+
+/* Changes background color on nav bar elements when scrolled over */
+.navbar-nav a:hover {
+background-color:lightgray;
+}
+
+/* HEADER TITLE */
+
+#title {
+	/* border-radius: .3rem;   */
+    padding: 15px 15px 15px 15px;   
+    background-color: #F8f9Fa;
+}
+
+/* HOMEPAGE SECTION FORMATTING IN BODY*/
+
+/* Section Headers */
+.display-4 {
+    font-size: 48px;
+}
+
+/* Panel Body */
+.panel-body {
+	/* border-radius: .3rem;   */
+    padding: 15px 15px 15px 15px;   
+    font-size: 18px;
+}
+
+/* Homepage Section Images */
+.lead-image{
+    float: right;
+    object-fit: contain;
+}
+
+#charity-image{
+    float: right;
+    object-fit: contain;
+    height: 400px;
+    width: 700px;
+    position: relative;
+    top: 60px;
+}
+
+#data-icon{
+    float: right;
+    object-fit: contain;
+    height: 400px;
+    width: 400px;   
+}
+
+/* Homepage Monthly Quote*/
+
+.quote{
+    word-wrap: break-word;
+    font-style: italic;
+    font-size: 24px;
+}
+
+/* Homepage Team Pics*/
+.pic{
+    padding: 5px;
+    width: 150px;
+    background-color: white;
+    float: center;
+    object-fit: contain;
+    border-spacing: 50px;
+    padding: 10px;
+    position: relative;
+    right: 50px;
+}
+
+.name{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 18px;
+    width: 150px;
+}
+
+/* PAGES */
+
+/* Description Text */
+
+.description{
+    word-wrap: break-word;
+    font-size: 18px;
+}
+
+/* Page Body */
+#page-body{
+    padding: 20px;
+    background-color: white;
+}
+
+/* Filter Section */
+.filter-header{
+    font-size: 18px;
+    padding: 10px;
+    text-align: center;
+    width: 50%;
+    background-color: rgb(223, 222, 222);
+}
+
+#filter-line {
+    width: 100%;
+    height: .5px;
+    background-color: lightgray;
+    border: 0 none;
+}
+
+/* .vertical { 
+    border-left: 1px solid lightgray; 
+    height: 30px; 
+    margin-left: 10px;
+    position: absolute;
+    left: -150px;
+}  */
+
+/* CHARITY DETAILS PAGE */
+.show {display: block;}
+
+.filter-title {
+    font-size: 18px;
+}
+
+.selData {
+    width: 110px;
+    font-size: 12px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: block;
+    position: absolute;
+    background-color: #f6f6f6;
+    min-width: 230px;
+    border: 1px solid #ddd;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+#myInput {
+    /* box-sizing: border-box; */
+    /* background-image: url('searchicon.png'); */
+    background-position: 14px 16px;
+    background-repeat: no-repeat;
+    font-size: 16px;
+    padding: 12px 16px;
+    border: none;
+    border-bottom: 1px solid #ddd;
+  }
+  
+#myInput:focus {outline: 3px solid #ddd;}
+
+@media (max-width: 500px) {
+    .navbar li {
+      padding: 10px;
+    }
+.text {
+    float: right;
+}
+.p{
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.p1{
+    font-size: 18px;
+    font-family:Arial, Helvetica, sans-serif;
+    background-color: black;
+}
+footer.footer{
+	background-color:#2d3238;
+	border-radius: .3rem;
+	text-align: center;
+	padding: 5px 5px;
+}
+.image{
+    height: 400px;
+    width : 500px;
+}

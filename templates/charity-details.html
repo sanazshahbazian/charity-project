@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+​
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <!-- Import D3    ​     -->
+    <script defer src="https://d3js.org/d3.v5.min.js"></script>
+
+    <!-- CSS File -->
+    <link rel="stylesheet" href={{url_for('static', filename='css/style.css')}} type="text/css">
+
+    <!-- PLOTLY -->
+    <script defer src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+    <title href="charity-details.html">Charity Project</title>
+  </head>
+  
+  <!-- Call in data from app.py file using MongoDB -->
+  <script type="text/javascript">
+    const data = JSON.parse({{charity_details|tojson}})
+  </script> 
+    <script defer type="text/javascript" src={{url_for('static', filename='js/charity-details.js')}}></script>
+  
+  <!-- Set background color of site -->
+  <body style="background-color:rgb(223, 222, 222);">
+    
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-fixed-top">
+        <a class="navbar-brand" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-weight: bold;" href="/">Charity Project</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="charity-details.html">Charity Details<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="expense-details.html">Financial Dashboard</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="us-charity-info.html">US Charity Info</a>
+            </li>     
+        </div>
+    </nav>
+​
+    <!-- Put extra space between navbar and containers below -->  
+    <br>
+​
+    <!-- CHARITY DETAILS PAGE -->
+
+    <!-- MAIN JUMBOTRON -->
+    <div class="jumbotron">
+      <div class="row">
+      <div class="col-lg-12 col-md-12 col-sm-12">
+      <h1 class="display-4">CHARITY DETAILS</h1>
+      <hr class="my-4">
+      <p class="description">Our database has information on the top 8200 non-profit organizations across the US. <br>This page provides a way to find a charity of your choice & learn more about their mission and organization practices.</p>
+      </div>
+      </div>
+    </div>
+
+    <!-- FILTER JUMBOTRON -->
+    <div class="jumbotron" id="page-body">
+      <div class="row">
+        <div class="col-lg-2 col-md-2 col-sm-2">
+        <h1 class="filter-header">FILTERS</h1>
+          <!-- <aside class="filters"> -->
+            <div class="panel panel-default">
+              <div class="panel-body">
+                <form>
+                  <div class="form-group">
+                    <ul class="list-group" id="filters">
+                      <li class="filter list-group-item">
+                        <div>
+                          <h3 class="filter-title">Choose a Charity:</h3>
+                          <select class="selData" id="selOrgData">
+                            <option></option>
+                          </select>
+                          <hr class="my-4" id="filter-line">
+                        </div>
+                        <div>
+                          <h3 class="filter-title">Choose a cause:</h3>
+                          <select class="selData" id="selCauseData">
+                            <option></option>
+                          </select>
+                          <hr class="my-4" id="filter-line">
+                        </div>
+                        <div>
+                          <h3 class="filter-title">Choose a State:</h3>
+                          <select class="selData" id="selStateData">
+                            <option></option>
+                          </select>
+                          <hr class="my-4" id="filter-line">
+                          <br>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <button id="filter-btn" type="button" class="btn btn-default">Click to Filter</button>
+                </form>
+              </div>
+            </div>
+          </div>
+          <!-- </aside> -->
+        <div class="col-lg-10 col-md-10 col-sm-10">
+        <div class = "filter-lists">
+          <!-- ************************ -->
+          <!-- ADD FILTER LISTS -->
+          <!-- ************************ -->
+          <!-- <div id="table-area" class=""> -->
+
+            <table id="charity-table" class="table table-striped">
+              <thead>
+                <tr class="table-header ">
+                  <th class="table-head">Organization Name</th>
+                  <th class="table-head">Cause</th>
+                  <th class="table-head">Subcategory</th>
+                  <th class="table-head">Location - State</th>
+                  <th class="table-head">Mission Statement</th>
+                  <!-- <th class="table-head">Website</th> -->
+                </tr>
+                <tr class="data-rows"></tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+        </div>
+        </div>
+  
+    </div> <!--div for row-->
+    </div> <!--div for main jumbotron-->

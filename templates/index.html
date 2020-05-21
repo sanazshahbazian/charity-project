@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+​
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+​    
+    <!-- CSS File -->
+    <link rel="stylesheet" href="../static/css/style.css">
+
+    <title>Charity Project</title>
+  </head>
+  
+  <!-- <div class="container"> -->
+  <body style="background-color:rgb(223, 222, 222);">
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-fixed-top">
+        <a class="navbar-brand" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-weight: bold;" href="/">Charity Project</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="charity-details.html">Charity Details<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="expense-details.html">Financial Dashboard</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="us-charity-info.html">US Charity Info</a>
+            </li>
+           
+        </div>
+      </nav>
+​
+    <!-- Put extra space between navbar and containers below -->  
+    <br>
+​
+    <!-- HOMEPAGE -->
+
+    <!-- MISSION STATEMENT JUMBOTRON -->
+    <div class="jumbotron">
+      <div class="row">
+      <div class="col-lg-6 col-md-6 col-sm-6">
+      <h1 class="display-4">Welcome to the Charity Project</h1>
+      <hr class="my-4">
+      <p class="quote">Our website is dedicated to providing Americans with a simple tool to find a charity they can be passionate about & contribute confidently knowing they are helping make a change.</p>
+      <br>
+      <p class="navigating" style="font-weight: bold">Navigating our site:</p>
+      <ul>
+        <li>Charity Details Page<br>Learn more about a charity of your choice or search for a charity organizations based on causes you care about and location.</li><br>
+        <li>Financial Dashboard<br>Find how different charities spend their funds.</li><br>
+        <li>US Charity Info Page<br>Get more information on how Americans across the country are giving back.</li><br>
+      </ul>
+      </div>
+      <div class="col-lg-6 col-md-6 col-sm-6">
+      <img class="lead-image" id="charity-image" src="{{url_for('static', filename='images/charity2.jpg')}}" alt="charity-image">
+      </div>
+      </div>
+    </div>
+
+    <!-- THIS MONTH JUMBOTRON -->
+    <div class="jumbotron">
+      <div class="row">
+      <div class="col-lg-6 col-md-6 col-sm-6">
+      <h1 class="display-4">THIS MONTH...</h1>
+      <hr class="my-4">
+      <p class="quote">"One of the things that I encourage for anybody who is interested in their own charity or philanthropy is to start from where you are and what has mattered to you."</p>
+      <p class="lead">Oprah Winfrey</p>
+      </div>
+      <div class="col-lg-5 col-md-5 col-sm-5">
+      <img class="lead-image" style="float:right" src="{{url_for('static', filename='images/monthly-image.jpg')}}" alt="monthly-image">
+      </div>
+      </div>
+    </div>
+
+    <!-- ABOUT US JUMBOTRON -->
+    <div class="jumbotron">
+      <div class="row">
+      <div class="col-lg-6 col-md-6 col-sm-6">
+      <h1 class="display-4">ABOUT US</h1>
+      <hr class="my-4">
+      <div class="panel-body">
+        <p>Data Source: Charity Navigator API</p>
+        <p>Our data is from a web-scraped CSV based off the Charity Navigator API. We store and connect our data with MongoDB, Flask. Our site is built on HTML, CSS, and Bootstrap.</p><br>
+      </div>
+      </div>
+      <div class="col-lg-5 col-md-5 col-sm-5">
+      <img class="lead-image" id="data-icon" style="float:right" src="{{url_for('static', filename='images/data-icon.png')}}" alt="data-icon">
+      </div>
+      </div>
+    </div>
+
+    <!-- MEET THE TEAM JUMBOTRON -->
+    <div class="jumbotron">
+      <div class="row">
+      <div class="col-lg-6 col-md-6 col-sm-6">
+      <h1 class="display-4">MEET THE TEAM</h1>
+      <hr class="my-4">
+      <div class="panel-body">
+
+        <div class="row" style="text-align: center;">
+                  
+                 
+          <div class="col-lg-2 col-md-6 col-sm-12">
+            <img class="pic" src="{{url_for('static', filename='pics/Samir.png')}}" height="150" width="150" alt="Samir" style="margin: 0px 350px">
+            <p class="name" style="margin: 0px 300px">Samir Sandir</p>
+          </div>
+          
+          <div class ="col-lg-2 col-md-6 col-sm-12">
+            <img class="pic" src="{{url_for('static', filename='pics/Jennie.jpg')}}" height="150" width="150" alt="Jennie" style="margin:0px 400px">
+            <p class="name" style="margin: 0px 350px">Jennie Chen</p>
+          </div>
+          
+          <div class ="col-lg-2 col-md-6 col-sm-12">
+            <img class="pic" src="{{url_for('static', filename='pics/Sanaz.png')}}" height="150" width="150" alt="Sanaz" style="margin: 0px 450px">
+            <p class="name" style="margin: 0px 400px">Sanaz Shahbazian</p>
+          </div>
+          
+          <div class="col-lg-2 col-md-6 col-sm-12">
+            <img class="pic" src="{{url_for('static', filename='pics/Jack.jpg')}}" height="150" width="150" alt="Jack" style="margin: 0px 500px">
+            <p class="name" style="margin: 0px 450px">Jack Oremus</p>
+          </div>
+          
+          <div class="col-lg-2 col-md-6 col-sm-12">
+            <img class="pic" src="{{url_for('static', filename='pics/Jade.png')}}" height="150" width="150" alt="Jade" style="margin: 0px 550px">
+            <p class="name" style="margin: 0px 500px">Jade Guo</p>
+          </div>
+  
+          <p class="p1"> </p>
+          <p class= "p1"> </p>
+          <br>        
+      </div>
+
+      </div>
+      </div>
+    </div>
+  <!-- </div> -->
+  
